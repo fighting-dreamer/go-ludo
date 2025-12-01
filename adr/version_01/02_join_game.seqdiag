@@ -1,0 +1,14 @@
+Title: Join Game
+
+user->server: game-id, player name, colour
+Note right of server: checks input validity like colour
+server->database: check game id validity
+Note over server: valid game 
+database-->server: confirm valid game
+server->database: add player to game
+database-->server: player added
+server-->user: response success : confirmation of player created with player id
+Note over server: invalid game
+database-->server: invalid game
+database-->server: invalid game
+server-->user: response error : display msg of "invalid game id"

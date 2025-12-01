@@ -1,13 +1,14 @@
 ## Spec
 
-- user interact using command line or rest API ? command line, its a simple app of ludo
-- user roll a dice and if you get `6` you get to run again "once more only".
-- user just say `roll`
+- 4 users play ludo.
+- the user inputs are simulated
+- the user have a registeration against a game id
+- the user cast the dice using roll operation and assigned a number [1-6]
 
----
-
-1. we need to define the board.
-2. we need to define the coordinator for game.
-3. command line intereface for giving commands
-   1. user registration with names
-   2. user play
+ludo rules that apply :
+  - if you encounter a 6 you place again.
+  - the board have set of indexes that overlap, some dont overlap and some are safe points.
+    - safe points : two or more player dots can stay without being taken away.
+  - if a user's position is taken by other user, the other user have to start again.
+  - if you encounter a 6 then you can roll once more.
+  - no specific starting dice number to wait for.

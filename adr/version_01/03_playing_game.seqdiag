@@ -1,0 +1,6 @@
+Title: playing Game
+
+user->server: game-id, player-id
+server->database: validate and fetch game state
+database-->server: game state data
+server-->user: response : \n roll result, \n next Pos & \n Steps till winning position
